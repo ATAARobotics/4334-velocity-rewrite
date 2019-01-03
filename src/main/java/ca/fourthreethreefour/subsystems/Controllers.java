@@ -1,3 +1,5 @@
+package ca.fourthreethreefour.subsystems;
+
 import edu.first.module.Module;
 import edu.first.module.joysticks.XboxController;
 import edu.first.module.subsystems.Subsystem;
