@@ -1,6 +1,7 @@
 package ca.fourthreethreefour;
 
 import ca.fourthreethreefour.subsystems.Controllers;
+import ca.fourthreethreefour.subsystems.Drive;
 
 /**
  * The central repository for all constant values. Values here are expected to
@@ -44,5 +45,5 @@ import ca.fourthreethreefour.subsystems.Controllers;
  */
 
 //Make sure to add whatever subsystem you add to here
-public interface Constants extends Controllers {
+public interface Constants extends Drive, Controllers {
 }

@@ -13,8 +13,8 @@ public class Robot extends IterativeRobotAdapter implements Constants {
      * pasted this comment from 2018 lmao.
 	 */
     private final Subsystem
-        AUTO_MODULES = new Subsystem(new Module[] { }),
-        TELEOP_MODULES = new Subsystem(new Module[] { controllers }),
+        AUTO_MODULES = new Subsystem(new Module[] { drive }),
+        TELEOP_MODULES = new Subsystem(new Module[] { drive, controllers }),
         ALL_MODULES = new Subsystem(new Module[] { AUTO_MODULES, TELEOP_MODULES });
     
     public Robot() {
