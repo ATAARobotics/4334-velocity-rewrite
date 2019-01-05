@@ -3,7 +3,7 @@ plugins {
     id "edu.wpi.first.GradleRIO" version "2019.0.0-alpha-3"
 }
 
-def ROBOT_CLASS = "frc.robot.Robot"
+def ROBOT_CLASS = "ca.fourthreethreefour.GamePeriods"
 
 // Define my targets (RoboRIO) and artifacts (deployable files)
 // This is added by GradleRIO's backing project EmbeddedTools.
@@ -38,6 +38,7 @@ dependencies {
     compile wpilib()
     compile ctre()
     compile navx()
+    compile group: 'com.ctre', name: 'CTRE_Phoenix'
     compile group: 'edu.first', name: 'atalibj'
 }
 
