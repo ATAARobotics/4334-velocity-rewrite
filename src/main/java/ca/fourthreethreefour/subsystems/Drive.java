@@ -4,26 +4,34 @@ import edu.first.identifiers.Function;
 import edu.first.identifiers.InversedSpeedController;
 import edu.first.module.Module;
 import edu.first.module.actuators.Drivetrain;
-import edu.first.module.actuators.MotorModule;
+import ca.fourthreethreefour.module.actuators.MotorModule;
+import ca.fourthreethreefour.module.actuators.PWMVictorSPXModule;
 import edu.first.module.actuators.SpeedController;
 import edu.first.module.actuators.SpeedControllerGroup;
-import edu.first.module.actuators.MotorModule.Type;
+import ca.fourthreethreefour.module.actuators.MotorModule.Type;
 import edu.first.module.subsystems.Subsystem;
+import edu.wpi.first.wpilibj.PWMVictorSPX;
 
 public interface Drive {
 
-    MotorModule
+    /*MotorModule
         left1 = new MotorModule(Type.VICTOR_SPX, 0),
         left2 = new MotorModule(Type.VICTOR_SPX, 1),
         right1 = new MotorModule(Type.VICTOR_SPX, 2),
-        right2 = new MotorModule(Type.VICTOR_SPX, 3);
+        right2 = new MotorModule(Type.VICTOR_SPX, 3);*/
+
+    PWMVictorSPXModule
+        left1 = new PWMVictorSPXModule(0),
+        left2 = new PWMVictorSPXModule(1),
+        right1 = new PWMVictorSPXModule(2),
+        right2 = new PWMVictorSPXModule(3);
 
     SpeedControllerGroup
         left = new SpeedControllerGroup(new SpeedController[] { left1, left2 }),
         right = new SpeedControllerGroup(new SpeedController[] { right1, right2 });
 
     Drivetrain
-        drivetrain = new Drivetrain(new InversedSpeedController(left), right);
+        drivetrain = new Drivetrain(left, new InversedSpeedController(right));
 
         
 	/**
